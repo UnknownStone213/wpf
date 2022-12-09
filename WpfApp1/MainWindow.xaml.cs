@@ -24,5 +24,16 @@ namespace WpfApp1
         {
             InitializeComponent();
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+
+            WpfApp1.DataSet dataSet = ((WpfApp1.DataSet)(this.FindResource("dataSet")));
+            // Load data into the table Table. You can modify this code as needed.
+            WpfApp1.DataSetTableAdapters.TableTableAdapter dataSetTableTableAdapter = new WpfApp1.DataSetTableAdapters.TableTableAdapter();
+            dataSetTableTableAdapter.Fill(dataSet.Table);
+            System.Windows.Data.CollectionViewSource tableViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("tableViewSource")));
+            tableViewSource.View.MoveCurrentToFirst();
+        }
     }
 }
