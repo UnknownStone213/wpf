@@ -42,8 +42,24 @@ namespace WpfApp1
 
         private void buttonAdd_Click(object sender, RoutedEventArgs e)
         {
-            DataSetTableAdapters.TableTableAdapter tableAdapter = new DataSetTableAdapters.TableTableAdapter();
-            tableAdapter.Insert("a", "a", "2022");
+            //WpfApp1.DataSet dataSet = ((WpfApp1.DataSet)(this.FindResource("dataSet")));
+            //dataSet.Table.AcceptChanges();
+            //dataSet.AcceptChanges();
+            ////dataSet.Table.AddTableRow(firstNameTextBox.Text, lastNameTextBox.Text, yearOfInrollTextBox.Text);
+            //DataRow dataRow = dataSet.tableTable.NewRow();
+            //dataRow[1] = firstNameTextBox.Text;
+            //dataRow[2] = lastNameTextBox.Text;
+            //dataRow[3] = yearOfInrollTextBox.Text;
+            //dataSet.tableTable.Rows.Add(dataRow);
+        }
+
+        private void buttonAdd2_Click(object sender, RoutedEventArgs e)
+        {
+            WpfApp1.DataSet dataSet = ((WpfApp1.DataSet)(this.FindResource("dataSet")));
+            dataSet.Table.AcceptChanges();
+            dataSet.AcceptChanges();
+            dataSet.tableTable.AddTableRow(textBoxFName.Text, textBoxLName.Text, textBoxYearOfInroll.Text);
+            //dataSet.WriteXml(textBoxFName.Text, textBoxLName.Text, textBoxYearOfInroll.Text));
         }
     }
 }

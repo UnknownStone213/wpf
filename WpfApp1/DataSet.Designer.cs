@@ -24,7 +24,7 @@ namespace WpfApp1 {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class DataSet : global::System.Data.DataSet {
         
-        private TableDataTable tableTable;
+        public TableDataTable tableTable;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         

@@ -41,7 +41,11 @@
             <Label Grid.Column="0" Content="Year Of Inroll:" HorizontalAlignment="Left" Margin="3" Grid.Row="3" VerticalAlignment="Center"/>
             <TextBox x:Name="yearOfInrollTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="NaN" Margin="3" Grid.Row="3" Text="{Binding YearOfInroll, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
         </Grid>
-        <Button x:Name="buttonAdd" Content="Add" HorizontalAlignment="Left" Margin="141,146,0,0" VerticalAlignment="Top" Grid.RowSpan="2" Click="buttonAdd_Click"/>
+        <Button x:Name="buttonUpdate" Content="Update" HorizontalAlignment="Left" Margin="141,146,0,0" VerticalAlignment="Top" Grid.RowSpan="2" Click="buttonAdd_Click"/>
+        <TextBox x:Name="textBoxFName" HorizontalAlignment="Left" Margin="94,44,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBoxLName" HorizontalAlignment="Left" Margin="94,67,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBoxYearOfInroll" HorizontalAlignment="Left" Margin="94,90,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="buttonAdd2" Content="Add2" HorizontalAlignment="Left" Margin="117,144,0,0" Grid.Row="1" VerticalAlignment="Top" Click="buttonAdd2_Click"/>
 
     </Grid>
 </Window>
