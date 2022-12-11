@@ -5,17 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+        Title="MyDataGrid" Height="450" Width="800" Loaded="Window_Loaded">
     <Window.Resources>
         <local:DataSet x:Key="dataSet"/>
         <CollectionViewSource x:Key="tableViewSource" Source="{Binding Table, Source={StaticResource dataSet}}"/>
     </Window.Resources>
     <Grid DataContext="{StaticResource tableViewSource}">
-        <DataGrid x:Name="tableDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" RowDetailsVisibilityMode="VisibleWhenSelected" Margin="101,117,299,117">
+        <DataGrid x:Name="tableDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" RowDetailsVisibilityMode="VisibleWhenSelected" Margin="65,126,335,108">
             <DataGrid.Columns>
                 <DataGridTextColumn x:Name="idColumn" Binding="{Binding Id}" Header="Id" IsReadOnly="True" Width="SizeToHeader"/>
                 <DataGridTextColumn x:Name="firstNameColumn" Binding="{Binding FirstName}" Header="First Name" Width="SizeToHeader"/>
                 <DataGridTextColumn x:Name="lastNameColumn" Binding="{Binding LastName}" Header="Last Name" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="YearOfInrollColumn" Binding="{Binding YearOfInroll}" Header="Year Of Inroll" Width="SizeToHeader"/>
             </DataGrid.Columns>
         </DataGrid>
 
