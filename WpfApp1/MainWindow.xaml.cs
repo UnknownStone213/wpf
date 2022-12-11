@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.SqlServer.Server;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,7 +35,15 @@ namespace WpfApp1
             WpfApp1.DataSetTableAdapters.TableTableAdapter dataSetTableTableAdapter = new WpfApp1.DataSetTableAdapters.TableTableAdapter();
             dataSetTableTableAdapter.Fill(dataSet.Table);
             System.Windows.Data.CollectionViewSource tableViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("tableViewSource")));
-            tableViewSource.View.MoveCurrentToFirst();
+            //
+            dataSet.AcceptChanges();
+            dataSet.Table.AcceptChanges();
+        }
+
+        private void buttonAdd_Click(object sender, RoutedEventArgs e)
+        {
+            DataSetTableAdapters.TableTableAdapter tableAdapter = new DataSetTableAdapters.TableTableAdapter();
+            tableAdapter.Insert("a", "a", "2022");
         }
     }
 }
